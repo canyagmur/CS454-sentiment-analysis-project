@@ -1,0 +1,25 @@
+data:
+  train_size : 0.7
+  test_size: 0.15
+  val_size: 0.15
+  random_state: 42
+vectorization:
+  vectorizer: "CountVectorizer"
+dimensionality_reduction:
+  use_dim_reduction: False
+  use_pca: True
+  n_components: 100
+naive_bayes:
+  alphas: [1] #[0.5, 1, 1.5]
+decision_tree:
+  max_depth_values: [10] #[10, 20, 30, 40, 50]
+  min_samples_split_values: [5] #[2, 5, 10]
+  criterion_values: ["entropy"] #['gini', 'entropy']
+neural_net:
+  hidden_units: [128] #[64, 128]
+  learning_rate: [0.001]
+  num_layers: [3] 
+  activation_function: ["relu"]
+  n_epochs: [30]
+
+
